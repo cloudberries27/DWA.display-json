@@ -11,30 +11,35 @@ function TextBlock({type, data}) {
   }
 }
 
-
 function Article(props){
-  const [article, setArticle] = useState({})
-  const routeId = props.match.params.id;
+    const [article, setArticle] = useState({});
+    const routeId = props.match.params.id;
 
-  useEffect(() => {
-    for(let i = 0; i < articleData.length; i++){
-      if(articleData[i].id === routeId){
-        setArticle(articleData[i])
-      }
-    }
-  },[]);
+    useEffect(() => {
+      for(let i = 0; i < articleData.length; i++)
+        if(articleData[i].id === routeId){
+          setArticle(articleData[i])
+        } else{
+          console.log('nope');
+        }
+    },[]);
 
-  return(
-    <div className="article">
-      <h1>{articleData.title}</h1>
-      <h2>{articleData.blurb}</h2>
-      <div className="articleText">
-        {article.articleText && article.articleText.map((text, i)=>(
-          <TextBlock key={i} type={text.type} data={text.data}></TextBlock>
-        ))}
+    return(
+      <div className = "article">
+        <div className="header" style={{ backgroundImage: `url('${article.image && article.image.url}')` }}>
+          <div className="header_text">
+            <h1>{article.title}</h1>
+            <p>{article.publishedDate}</p>
+            <p>{article.blurb}</p>
+          </div>
+        </div>
+        <div className="articleText">
+          {article.articleText && article.articleText.map((text, i)=>(
+            <TextBlock key={i} type={text.type} data={text.data}></TextBlock>
+          ))}
+        </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
 
 export default Article;
