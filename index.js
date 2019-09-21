@@ -15,7 +15,7 @@ class Home extends Component{
               <h2> {articleDetail.title} </h2>
               <p> {articleDetail.publishedDate} </p>
               <p> {articleDetail.blurb} </p>
-              <a href={`/articleData/${articleDetail.id}`}>Read More</a>
+              <a href={`/Article/${articleDetail.id}`}>Read More</a>
             </div>
           </div>
         )
