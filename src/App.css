@@ -1,0 +1,40 @@
+.articleObj h1{
+  padding-left: 100px;
+  font-size: 60px;
+}
+
+.header{
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.header_text{
+  padding-left: 300px;
+  padding-right: 300px;
+}
+.articleText{
+  padding-left: 300px;
+  padding-right: 300px;
+}
+.article .header h1 {
+  font-size: 60px;
+  margin: 30px 0px 10px 0px;
+}
+
+
+.articleObj img{
+  height: 200px;
+  width: 300px;
+}
+.text{
+  padding-left:20px;
+}
+
+.articleStuff{
+  display: flex;
+  justify-content:space-around;
+  padding: 20px;
+  border-style: solid;
+  border-width: thin;
+  margin: 20px 150px 20px 150px;
+}

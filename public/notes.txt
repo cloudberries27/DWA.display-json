@@ -1,0 +1,38 @@
+json - is an object javascript file, its always wrapped and every
+curly bracket is its own object in the json object all you need
+in the curly brackets is a key and a value, the value can also be
+another object like an array.
+
+[
+  {
+    "key" : "value",
+    "item" : [
+      "item1", "item2"
+    ],
+    "anotherItem": [
+    {
+      "key" : "value"
+    },
+    {
+      "key" : "value"
+    }
+    ]
+  }
+]
+
+
+import React from 'react';
+
+export default function inlineStyle(){
+  return {
+    <div style={
+      {
+        backgroundImage: 'url("$(article.image.url)")',
+        margin: "10px",
+        paddingTop: "10px"
+      }
+    }>
+      {text}
+    </div>
+  };
+}
